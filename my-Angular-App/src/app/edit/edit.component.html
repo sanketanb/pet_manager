@@ -1,0 +1,27 @@
+<p>
+  edit works!
+</p>
+<h3>Edit this pet</h3>
+<p *ngIf="update_errors">{{update_errors}}</p>
+<form (submit)="updateOne(product_id)">
+  <!-- <p> {{update_product | json}}</p> -->
+  Pet name:
+  <input type="text" name="update_product.name" [(ngModel)]="update_product.name" />
+  <br>
+  <br> Pet type:
+  <input type="text" name="update_product.type" [(ngModel)]="update_product.type" />
+  <br>
+  <br> Description:
+  <input type="text" name="update_product.description" [(ngModel)]="update_product.description" />
+  <br>
+  <br> Skills (optional):
+  <br> Skill1:
+  <input type="text" name="update_product.skill1" [(ngModel)]="update_product.skill1" />
+  <br> Skill2:
+  <input type="text" name="update_product.skill2" [(ngModel)]="update_product.skill2" />
+  <br> Skill3:
+  <input type="text" name="update_product.skill3" [(ngModel)]="update_product.skill3" />
+  <br>
+  <button type="submit"> EDIT PET</button>
+</form>
+<button (click)="gotoDetails(product_id)">CANCEL</button>

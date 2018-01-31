@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<h3>These pets are looking for a home</h3>
+<a (click)="gotoNew()">
+  <u>Add a pet to the shelter</u>
+</a>
+
+<div *ngFor="let individual of display_products" style="text-align:center">
+  <p>Name: {{individual.name}}</p>
+  <p>Type: {{individual.type}}</p>
+  <button (click)="gotoDetails(individual._id)">Details</button>
+  <button (click)="gotoEdit(individual._id)">Edit</button>
+  <!-- <button [disabled]="!individual.loggedIn" (click)="deleteProduct(individual._id)">DELETE</button> -->
+
+</div>
+
+</html>

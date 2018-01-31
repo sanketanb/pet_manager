@@ -1,0 +1,28 @@
+<p>
+  new works!
+</p>
+<h3>Know of a pet needing a home?</h3>
+<p *ngIf="errors">{{errors}}</p>
+<form (submit)="createNewProduct()">
+  <!-- <p> {{new_product | json}}</p> -->
+  Pet name:
+  <input type="text" name="new_product.name" [(ngModel)]="new_product.name" />
+  <br>
+  <br> Pet type:
+  <input type="text" name="new_product.type" [(ngModel)]="new_product.type" />
+  <br>
+  <br> Description:
+  <input type="text" name="new_product.description" [(ngModel)]="new_product.description" />
+  <br>
+  <br> Skills (optional):
+  <br>
+  Skill1:
+  <input type="text" name="new_product.skill1" [(ngModel)]="new_product.skill1" />
+  <br> Skill2:
+  <input type="text" name="new_product.skill2" [(ngModel)]="new_product.skill2" />
+  <br> Skill3:
+  <input type="text" name="new_product.skill3" [(ngModel)]="new_product.skill3" />
+  <br>
+  <button type="submit"> ADD PET</button>
+</form>
+<button (click)="gotoHome()">CANCEL</button>

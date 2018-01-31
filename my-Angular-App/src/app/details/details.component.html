@@ -1,0 +1,11 @@
+<a (click)="gotoHome()"><u>Home</u></a>
+<h2>Details about {{update_product.name}}</h2>
+
+<p>Pet type:{{update_product.type}}</p>
+<p>Description: {{update_product.description}}</p>
+<p>Skills:{{update_product.skill1}}</p>
+<p>{{update_product.skill2}}</p>
+<p>{{update_product.skill3}}</p>
+<p>Likes:{{update_product.likes}}</p>
+<button (click)="voteUp()">Like this pet</button>
+<button (click)="deleteProduct(product_id)">Adopt this pet</button>
